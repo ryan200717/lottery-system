@@ -1,0 +1,14 @@
+{
+  "api": {
+    "port": 3000,
+    "versions": {
+      "v1": "v1"
+    }
+  },
+  "mongoDb": {
+    "protocolPrefix": "mongodb+srv",
+    "domain": "cluster0.ckntn29.mongodb.net",
+    "db": "lottery_system",
+    "authSource": "admin"
+  }
+}

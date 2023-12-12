@@ -21,6 +21,7 @@ Please set up the path into the configuration file
 There are ONLY one services that need to be started:the Main Service.
 
 1. `npm run start-{env}`
+2. `npm run start-dev-atlas` (To run into online mongodb atals mode)
 
 # Authentication details
 

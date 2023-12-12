@@ -10,7 +10,7 @@ const errorHandler = (err, req, res) => {
         status: errStatus,
         errCode: err.errorCode == null ? '0000' : err.errorCode,
         message: errMsg,
-        stack: process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test' ? err.stack : {},
+        stack: process.env.NODE_ENV === 'production' ? {} : err.stack,
     });
 };
 
