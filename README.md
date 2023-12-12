@@ -37,7 +37,7 @@ Please create or set up the Database authentic details in the .env.{env} file.
 Please run `npm run test` to use jest to run a unit test.
 
 # Api Spec
-Please find  `api_spec.doc` in the document folder
+Please find  `api_spec.md` in the document folder
 
 # Limitation
 
