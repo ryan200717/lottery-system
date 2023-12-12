@@ -38,16 +38,14 @@ Please run `npm run test` to use jest to run a unit test.
 
 # Limitation
 
-1. Security
-   1. Add the authentication to protect the ticket detail
-2. Real-time update
-   1. using Restful API may not notice the winner immediately
-      1. using Websocket or push notifications
-3. Fairness in generating random numbers 
-   1. using Math.random and crypto.getRandomValues both are not true random number
-      1. Prevent using Math.random to ensure more fairness
-         1. Reason: using 'seed', people can predict the random number by the pattern 
-
+1. Enhancing Security
+   1. Implement authentication measures to safeguard ticket details.
+2. Real-Time Updates
+   1. Utilize WebSockets or push notifications instead of Restful API to ensure immediate winner notifications.
+3. Ensuring Fairness in Random Number Generation
+   1. Acknowledge that Math.random and crypto.getRandomValues are not true random number generators.
+   2. Avoid using Math.random to promote fairness.
+      1. Justification: Predicting random number patterns is possible using 'seed' values.
 
 
 
