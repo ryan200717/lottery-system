@@ -22,7 +22,7 @@ There are ONLY one services that need to be started:the Main Service.
 
 1. `npm run start-{env}`
 
-# Authentic details
+# Authentication details
 
 Please create or set up the Database authentic details in the .env.{env} file.
 
@@ -31,8 +31,7 @@ Please create or set up the Database authentic details in the .env.{env} file.
 
 # Environment
 1. development
-2. production
-3. test
+2. test
 
 # Test
 Please run `npm run test` to use jest to run a unit test.
