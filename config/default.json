@@ -1,0 +1,14 @@
+{
+	"api": {
+	"port": 3000,
+		"versions": {
+			"v1": "v1"
+	}
+},
+	"mongoDb": {
+		"protocolPrefix": "mongodb",
+			"domain": "127.0.0.1:27017",
+			"db": "lottery_system",
+			"authSource": "admin"
+	}
+}
