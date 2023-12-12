@@ -18,9 +18,6 @@ const checkoutTicket = async (req, res, next) => {
         const latestRoundSearch = await getLatestRound();
         let latestRound = 1;
         if (latestRoundSearch !== null) {
-            if (latestRound.status === lotteryStatus.locked) {
-                throw { errorCode: '0003' };
-            }
             latestRound = latestRoundSearch.status === lotteryStatus.active ? latestRoundSearch.round : latestRoundSearch.round + 1;
         }
         const body = {

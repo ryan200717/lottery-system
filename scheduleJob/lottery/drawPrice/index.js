@@ -1,6 +1,6 @@
 const moment = require('moment');
 const { updateResult, getAllActiveLockTicket } = require('../../../data/tickets');
-const { getRandomNumber } = require('../../../utils/commonFunction');
+const { getRandomNumberByCrypto } = require('../../../utils/commonFunction');
 
 const drawPrice = async () => {
     try {
@@ -13,7 +13,7 @@ const drawPrice = async () => {
         }
         console.log(`Total ${activeTicketList.length} join the lottery-system`);
 
-        const winnerTicket = getRandomNumber(0, activeTicketList.length - 1);
+        const winnerTicket = getRandomNumberByCrypto(0, activeTicketList.length - 1);
         console.log(`Winner: ${activeTicketList[winnerTicket]._id}, Round: ${activeTicketList[winnerTicket].round}`);
         await updateResult(activeTicketList[winnerTicket]._id, activeTicketList[winnerTicket].round);
     } catch (e) {
