@@ -27,12 +27,20 @@ There are ONLY one services that need to be started:the Main Service.
 
 Please create or set up the Database authentic details in the .env.{env} file.
 
-1. MONGODB_USERNAME
+1. MONGODB_USERNAME 
 2. MONGODB_PASSWORD
+3. MONGODB_DOMAIN (Only applicable for using MongoDB Atlas)
+
+* Please ask me for the username,password and domain if you want to use mongoDb Atlas
+
+## MongoDb (Local)
+1. Please set a database `lottery_system`
+2. Please set a collection `tickets`
 
 # Environment
 1. development
-2. test
+2. development-atlas
+3. test
 
 # Test
 Please run `npm run test` to use jest to run a unit test.

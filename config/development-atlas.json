@@ -7,7 +7,7 @@
   },
   "mongoDb": {
     "protocolPrefix": "mongodb+srv",
-    "domain": "cluster0.ckntn29.mongodb.net",
+    "domain": "",
     "db": "lottery_system",
     "authSource": "admin"
   }
