@@ -65,6 +65,15 @@ const lockTicketStatus = async (round) => {
     }
 };
 
+const getTestTicket = async () => {
+    try {
+        return await data.findOne({ });
+    } catch (e) {
+        console.log(e);
+        throw new Error(`Error getting tickets. Reason: ${e.message}`);
+    }
+};
+
 module.exports = {
     insertTicket,
     getLatestRound,
@@ -72,4 +81,5 @@ module.exports = {
     updateResult,
     lockTicketStatus,
     getResult,
+    getTestTicket,
 };

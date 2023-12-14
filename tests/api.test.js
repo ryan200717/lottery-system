@@ -1,6 +1,7 @@
 const request = require('supertest');
 const app = require('../index');
-const { errorCodeMessage } = require('../constant/errorMessage'); // Assuming your API entry point is 'index.js'
+const { errorCodeMessage } = require('../constant/errorMessage');
+const { getTestTicket } = require('../data/tickets'); // Assuming your API entry point is 'index.js'
 
 describe('get /api/v1/ticket/available', () => {
     test('Happy Flow', async () => {
@@ -39,8 +40,9 @@ describe('POST /api/v1/ticket', () => {
 
 describe('GET /api/v1/result', () => {
     test('Happy Flow', async () => {
-        const ticketId = 'dd0d5170-1450-4a28-a172-5f70b9925887';
-        const name = '1234';
+        const result = await getTestTicket();
+        const ticketId = result.id;
+        const name = result.owner_name;
         const { body: response } = await request(app).get(`/api/v1/ticket/result?user_name=${name}&ticket_id=${ticketId}`);
         expect(typeof response.success).toBe('boolean');
         expect(response.status).toBe(200);

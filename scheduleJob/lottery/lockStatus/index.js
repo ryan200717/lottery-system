@@ -3,7 +3,7 @@ const { lockTicketStatus, getLatestRound } = require('../../../data/tickets');
 
 const lockStatus = async () => {
     try {
-        console.log('\n----------------------------------------------------------------123');
+        console.log('\n----------------------------------------------------------------');
         console.log(`${moment().format('yyyy-MM-DD HH:mm:ss')} Locked status`);
         const latestRoundSearch = await getLatestRound();
         const result = await lockTicketStatus(latestRoundSearch.round);

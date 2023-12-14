@@ -18,6 +18,10 @@ const checkoutTicket = async (req, res, next) => {
         const latestRoundSearch = await getLatestRound();
         let latestRound = 1;
         if (latestRoundSearch !== null) {
+            if (latestRoundSearch.status === lotteryStatus.locked) {
+                throw { errorCode: '0003' };
+            }
+
             latestRound = latestRoundSearch.status === lotteryStatus.active ? latestRoundSearch.round : latestRoundSearch.round + 1;
         }
         const body = {
@@ -78,9 +82,9 @@ const availableCheck = async (req, res, next) => {
         const body = {
             available: true,
         };
-        if (result.status === lotteryStatus.locked) {
+        if (result != null && result.status === lotteryStatus.locked) {
             body.available = false;
-            body.message = errorCodeMessage['0004'].message;
+            body.message = errorCodeMessage['0003'].message;
         }
         res.json(getNormalResponseParams({ data: body }));
     } catch (e) {
